@@ -9,18 +9,18 @@ Here are some pre-requisites for the blog series,Please make sure you implement 
 
 **Using Recruiting App**
 
-Keeping in mind that our readers might be interested to practice along with us, so We decided to use Recruiting App for all the metadata reference to make sure Users need not create anything extra and just install Recruiting App by Salesforce Labs and you all good to go.You can download the app from AppExchange here.
+Keeping in mind that our readers might be interested to practice along with us, so We decided to use Recruiting App for all the metadata reference to make sure Users need not create anything extra and just install Recruiting App by Salesforce Labs and you all good to go.You can download the app from AppExchange [here](https://appexchange.salesforce.com/apex/listingDetail?listingId=a0N300000016aa0EAA).
 
 **Set up Domain Name**
 
-When you enable My Domain, references and links to Lightning resources are in the format https://<myDomain>.lightning.force.com.Check here -How To Set Up Domain Name.Also for more details why do you want to that,check here for release notes.
+When you enable My Domain, references and links to Lightning resources are in the format https://<myDomain>.lightning.force.com.Check here -How To Set Up Domain Name.Also for more details why do you want to that,check [here](https://developer.salesforce.com/docs/atlas.en-us.identityImplGuide.meta/identityImplGuide/domain_name_setup.htm) for release notes.
 
-Upload BootStrap Static Resource for styling purposes
+**Upload BootStrap Static Resource for styling purposes**
 
 Download Bootstrap to give some styling from http://getbootstrap.com/.Upload BootStrap css  to static resource.We would refer the path of this css later in our code .
 
 **Using Developer Console**
 
-For now We are making sure that We use Developer Console for our lightning Components development and tutorials.If not worked yet on it,Check here  for the developer console tutorials.
+For now We are making sure that We use Developer Console for our lightning Components development and tutorials.If not worked yet on it,Check [here](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_devconsole.htm)  for the developer console tutorials.
 
 We would also suggest you to go through this awesome Trailhead module - Lightning Components Basics so that you are familiar with Lightning Components.
