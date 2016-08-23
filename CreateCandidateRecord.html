@@ -1,0 +1,56 @@
+<!--
+DISCLAIMER:
+THIS CODE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<!--
+          ** Component Details***
+         Name: CreateCandidateRecord
+         Type: Lightning Component 
+         Purpose: Component to create records
+-->
+
+
+<aura:component controller="CreateCandidateRecord" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <!-- Include Static Resource-->
+    <ltng:require styles="/resource/bootstrap/css/bootstrap.min.css" scripts="/resource/bootstrap/js/jquery.js,/resource/bootstrap/js/bootstrap.min.js"/>
+    
+    <!-- Define Attribute-->
+    <aura:attribute name="candidate" type="Candidate__c" default="{'sobjectType': 'Candidate__c',
+                         'First_Name__c': '',
+                         'Last_Name__c': '',
+                         'Email__c': '', 
+                         'SSN__c': ''
+                       }"/>
+    <div class="container-fluid">
+        <h3>Please Enter The Candidate Information</h3>
+        <div class="form-group">
+            <label>First Name</label>
+            <ui:inputText class="form-control" value="{!v.candidate.First_Name__c}"/>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <ui:inputText class="form-control" value="{!v.candidate.Last_Name__c}"/>
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <ui:inputText class="form-control" value="{!v.candidate.Email__c}"/>
+        </div>
+        <div class="form-group">
+            <label>SSN</label>
+            <ui:inputText class="form-control" value="{!v.candidate.SSN__c}"/>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <ui:button class="btn btn-default" press="{!c.create}">Create</ui:button>
+  </div>
+</aura:component>
