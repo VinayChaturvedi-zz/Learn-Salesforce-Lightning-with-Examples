@@ -1,3 +1,5 @@
+![]({{site.baseurl}}//4-1024x388.jpg)
+
 ## Introducing ‘Learn Salesforce Lightning with Examples’ Series
 
 Learn Salesforce Lightning with Examples is the series where  We would share the key practical examples and experiments with lightning.We mainly are focusing on Lightning Components for now.So stay tuned and enjoy our series.
