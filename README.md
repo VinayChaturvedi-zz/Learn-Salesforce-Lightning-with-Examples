@@ -1,4 +1,3 @@
-![]({{site.baseurl}}//4-1024x388.jpg)
 
 ## Introducing ‘Learn Salesforce Lightning with Examples’ Series
 
