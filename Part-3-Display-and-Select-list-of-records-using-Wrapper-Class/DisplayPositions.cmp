@@ -1,0 +1,62 @@
+<!--
+DISCLAIMER:
+THIS CODE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<!--
+          ** Component Details***
+         Name: DisplayPositions
+         Type: Lightning Component 
+         Purpose: Component to display position records
+-->
+<aura:component controller="DisplayPosition" implements="force:appHostable,
+														 flexipage:availableForAllPageTypes,
+														 flexipage:availableForRecordHome,
+														 force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+				access="global" >
+    <ltng:require styles="/resource/bootstrap/css/bootstrap.min.css" 
+				  scripts="/resource/bootstrap/js/jquery-2.js,/resource/bootstrap/js/bootstrap.min.js" />
+    <aura:attribute name="lstPositions" 
+					type="CommonWrapperClass.DisplayPositionRecords[]" />	
+    
+    <!--- on initialization of component init event will fire and doInit action will execute-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+    <div class="container">
+        <h2>Postions</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Position</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TO Check if list is not empty-->
+                <aura:if isTrue="{!!empty(v.lstPositions)}">
+                    <aura:iteration var="position" items="{!v.lstPositions}" >
+                        <tr>
+                            <td><ui:inputCheckbox value="{!position.isSelected}"/></td>
+                            <td><ui:outputText value="{!position.positionTitle}"/></td>
+                            <td><ui:outputText value="{!position.status}"/></td>
+                        </tr>
+                    </aura:iteration>
+                </aura:if>
+            </tbody>
+        </table>
+        
+        <ui:button class="btn btn-default" press="{!c.doSomething}">Perform Action</ui:button>
+        
+    </div>
+    
+</aura:component>
